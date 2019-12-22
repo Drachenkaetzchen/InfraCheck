@@ -1,0 +1,19 @@
+IN:
+    A:
+        '@':
+            - { template: "basic_web" }
+            - { template: "own_ip" }
+    AAAA:
+        '@':
+            - { template: "basic_web" }
+            - { template: "own_ip" }
+    CNAME:
+        support:
+            - { template: "basic_web" }
+            - { template: "own_ip" }
+        www:
+            - { template: "basic_web" }
+            - { template: "own_ip" }
+    MX:
+        '@':
+            - { type: "check_target", target: "10 ursa.uberspace.de."}

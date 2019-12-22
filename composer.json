@@ -1,0 +1,20 @@
+{
+    "name": "drachenkatze/infra-check",
+    "type": "project",
+    "minimum-stability": "dev",
+
+    "require": {
+        "php": ">=7.1",
+        "badcow/dns": "dev-master",
+        "symfony/yaml": "^5.1@dev",
+        "guzzlehttp/guzzle": "^6.5@dev",
+        "symfony/console": "^5.1@dev",
+        "psr/log": "^1.1@dev"
+    },
+    "autoload": {
+
+        "psr-4": {
+            "Drachenkatze\\ZoneChecker\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+$TTL 86400
+@   IN SOA ns1.first-ns.de. postmaster.robot.first-ns.de. (
+    2019121000   ; serial
+    14400        ; refresh
+    1800         ; retry
+    604800       ; expire
+    86400 )      ; minimum
+
+@                        IN NS      robotns3.second-ns.com.
+@                        IN NS      robotns2.second-ns.de.
+@                        IN NS      ns1.first-ns.de.
+
+@                        IN A       78.47.88.216
+localhost                IN A       127.0.0.1
+@                        IN AAAA    2a01:4f8:c17:1341::1
+www                      IN CNAME   pfote.drachenkatze.org.

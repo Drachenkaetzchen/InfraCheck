@@ -1,0 +1,82 @@
+IN:
+  A:
+    "@":
+      - { template: "basic_web" }
+      - { template: "own_ip" }
+    "homebox.feli-home":
+      - { template: "own_ip" }
+    "purplecube.feli-home":
+      - { template: "own_ip" }
+    "libreelec.feli-home":
+      - { template: "own_ip" }
+    "m402dn.feli-home":
+      - { template: "own_ip" }
+    "mini-nas.feli-home":
+      - { template: "own_ip" }
+    "pfote":
+      - { template: "own_ip" }
+    "routing":
+      - { template: "own_ip", defer_until: "2019-12-14" }
+    "localhost":
+      - { template: "own_ip" }
+    "unifi.feli-home":
+      - { template: "own_ip" }
+      - { type: "check_http", http: false, https: true, override_port_ssl: 8443,
+          check_certificate: false, content_should_contain: ["unifi"] }
+    "hypercube-octoprint.feli-home":
+      - { defer_until: "2019-12-22" }
+  AAAA:
+    "@":
+      - { template: "basic_web" }
+      - { template: "own_ip" }
+    "pfote":
+      - { template: "own_ip" }
+    "dms.mgmt":
+      - { template: "own_ip", defer_until: "2019-12-14" }
+    "dn42":
+      - { template: "own_ip", defer_until: "2019-12-18" }
+    "miau.mgmt":
+      - { template: "own_ip", defer_until: "2019-12-18" }
+    "routing":
+      - { template: "own_ip", defer_until: "2019-12-18" }
+  CNAME:
+    "dms":
+      - { template: "own_ip", defer_until: "2019-12-14" }
+    "phpmyadmin":
+      - { template: "own_ip", defer_until: "2019-12-14" }
+    "kodi.feli-home":
+      - { template: "own_ip" }
+    "druck":
+      - { template: "own_ip", defer_until: "2019-12-14" }
+    "loopback":
+      - { template: "own_ip" }
+    "parts":
+      - { template: "basic_web" }
+      - { template: "own_ip" }
+    "www":
+      - { template: "basic_web" }
+      - { template: "own_ip" }
+    "vrn":
+      - { template: "basic_web", status_codes: [] }
+      - { template: "own_ip"}
+    "schaltschrank":
+      - { template: "basic_web", content_should_contain: ["home assistant"] }
+      - { template: "own_ip", defer_until: "2019-12-10" }
+    "cloud":
+      - { template: "own_ip" }
+      - { template: "basic_web", content_should_contain: ["nextcloud"] }
+    "wolke":
+      - { template: "own_ip", defer_until: "2019-12-18" }
+    "miau":
+      - { template: "own_ip", defer_until: "2019-12-18" }
+    "nas.feli-home":
+      - { type: "check_target", target: "mini-nas.feli-home"}
+    "autoconfig":
+      - { type: "check_target", target: "uberspace"}
+    "autodiscover":
+      - { type: "check_target", target: "uberspace"}
+    "uberspace":
+      - { type: "check_target", target: "ursa.uberspace.de."}
+  MX:
+    "@":
+      - { type: "check_target", target: "10 ursa.uberspace.de."}

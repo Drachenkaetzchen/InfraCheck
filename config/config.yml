@@ -1,0 +1,4 @@
+templates:
+  - { name: "basic_web", type: "check_http", https: true, http: true, http_should_redirect_to_https: true, status_codes: [200], content_should_not_contain: ["error", "maintenance"]}
+  - { name: "partkeepr_demo", type: "check_http", https: true, http: true, http_should_redirect_to_https: true, status_codes: [200], content_should_not_contain: ["maintenance"]}
+  - { name: "own_ip", type: "check_ip", own_ips: ["78.47.88.216", "2a01:4f8:c17:1341::1", "172.22.117.0/24", "127.0.0.1"]}

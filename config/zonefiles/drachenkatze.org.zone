@@ -1,0 +1,41 @@
+$TTL 3600
+@   IN SOA ns1.first-ns.de. postmaster.robot.first-ns.de. (
+    2019122100   ; serial
+    14400        ; refresh
+    1800         ; retry
+    604800       ; expire
+    86400 )      ; minimum
+
+@                        IN NS      robotns3.second-ns.com.
+@                        IN NS      robotns2.second-ns.de.
+@                        IN NS      ns1.first-ns.de.
+
+@                        IN A       78.47.88.216
+dms                      IN A       172.22.117.253
+homebox.feli-home        IN A       172.22.117.232
+libreelec.feli-home       IN A       172.22.117.139
+localhost                IN A       127.0.0.1
+m402dn.feli-home         IN A       172.22.117.149
+mini-nas.feli-home       IN A       172.22.117.251
+pfote                    IN A       78.47.88.216
+purplecube.feli-home       IN A       172.22.117.231
+routing                  IN A       78.47.88.216
+unifi.feli-home          IN A       172.22.117.252
+@                        IN AAAA    2a01:4f8:c17:1341::1
+dn42                     IN CNAME pfote
+pfote                    IN AAAA    2a01:4f8:c17:1341::1
+autoconfig               IN CNAME   uberspace
+autodiscover             IN CNAME   uberspace
+cloud                    IN CNAME   pfote
+dms.feli-home            IN CNAME   dms
+kodi.feli-home           IN CNAME   libreelec.feli-home
+loopback                 IN CNAME   localhost
+nas.feli-home            IN CNAME   mini-nas.feli-home
+parts                    IN CNAME   pfote
+puppet                   IN CNAME   pfote
+schaltschrank            IN CNAME   pfote
+uberspace                IN CNAME   ursa.uberspace.de.
+vrn                      IN CNAME   pfote
+www                      IN CNAME   pfote
+@                        IN MX 10   ursa.uberspace.de.
+@                        IN TXT     "v=spf1 mx -all"

@@ -1,0 +1,15 @@
+IN:
+    A:
+        '@':
+            - { template: "basic_web" }
+            - { template: "own_ip" }
+        localhost:
+            - { template: "own_ip" }
+    AAAA:
+        '@':
+            - { template: "basic_web" }
+            - { template: "own_ip" }
+    CNAME:
+        www:
+            - { template: "basic_web",  }
+            - { template: "own_ip" }

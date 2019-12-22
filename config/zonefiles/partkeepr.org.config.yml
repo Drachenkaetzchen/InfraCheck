@@ -1,0 +1,30 @@
+IN:
+    A:
+        '@':
+            - { template: "basic_web" }
+            - { template: "own_ip" }
+        localhost:
+            - { template: "own_ip" }
+    AAAA:
+        '@':
+            - { template: "basic_web" }
+            - { template: "own_ip" }
+    CNAME:
+        demo:
+            - { template: "partkeepr_demo" }
+            - { template: "own_ip" }
+        demo-mobile:
+            - { template: "partkeepr_demo" }
+            - { template: "own_ip" }
+        downloads:
+            - { template: "own_ip" }
+            - { template: "basic_web", content_should_contain: ["Index of /"] }
+        wiki:
+            - { template: "own_ip" }
+            - { template: "basic_web", content_should_contain: ["PartKeepr Wiki"] }
+        www:
+            - { template: "basic_web" }
+            - { template: "own_ip" }
+    MX:
+        '@':
+            - { type: "check_target", target: "10 ursa.uberspace.de."}
